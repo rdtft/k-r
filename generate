@@ -1,28 +1,29 @@
 #!/usr/bin/env bash
 
 function usage {
-echo usage:
-echo generate -n name
+  echo usage:
+  echo generate -n name
 }
 
 while getopts "n:h" option; do
-	case "$option" in
-		n) name="$OPTARG"
-			;;
-		h)
-			usage
-			exit 0
-			;;
-		[?])
-			usage
-			exit 1
-			;;
-	esac
+  case "$option" in
+    n)
+      name="$OPTARG"
+      ;;
+    h)
+      usage
+      exit 0
+      ;;
+    [?])
+      usage
+      exit 1
+      ;;
+  esac
 done
 
 if [[ -z "$name" ]]; then
-	usage
-	exit 1
+  usage
+  exit 1
 fi
 
 cp -r dummy $name
