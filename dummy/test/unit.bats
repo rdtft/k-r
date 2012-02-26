@@ -2,6 +2,6 @@
 
 load test_helper
 
-@test "a passing test" {
+@test "passing test" {
 	true
 }
