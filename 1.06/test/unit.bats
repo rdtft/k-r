@@ -2,12 +2,12 @@
 
 load test_helper
 
-@test "return one" {
+@test "return zero" {
   result="$(1.06 < /dev/null)"
   [ "$result" = "0" ]
 }
 
-@test "return zero" {
+@test "return one" {
   result="$(printf "bar" | 1.06)"
   [ "$result" = "1110" ]
 }
